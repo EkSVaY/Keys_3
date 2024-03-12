@@ -27,9 +27,14 @@ def revenue():
     return general_revenue
 
 def main():
+
     print(ru.CATEGORY)
     category = int(input(ru.MEANING))
-    taxable_amount = revenue() - free_tax()
+    rev = revenue()
+    print(ru.YEAR_SAL, rev)
+    free = free_tax()
+    print(ru.FREE_SUM, free)
+    taxable_amount = rev - free
 
     if category == 1:
         print("aex")

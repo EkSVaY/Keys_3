@@ -32,7 +32,8 @@ def revenue():
 
 def main():
     '''
-    The function determines the annual salary.
+    The function performs the task
+    :return: None
     '''
 
     print(ru.CATEGORY)
@@ -112,4 +113,5 @@ def main():
         print(ru.FAIL)
 
 
-main()
+if __name__ == '__main__':
+    main()

@@ -65,7 +65,7 @@ def main():
                     tax = 9075 * 0.1 + 27824 * 0.15 + (taxable_amount - 36901) * 0.25
                 if taxable_amount > 9076 and taxable_amount <= 36901:
                     tax = 9075 * 0.1 + (taxable_amount - 9076) * 0.15
-                if taxable_amount >= 0 and taxable_amount <= 9076:
+                if taxable_amount > 0 and taxable_amount <= 9076:
                     tax = taxable_amount * 0.1
             elif category == "2":
                 if taxable_amount > 457601:
@@ -84,7 +84,7 @@ def main():
                     tax = 18150 * 0.1 + 55649 * 0.15 + (taxable_amount - 73801) * 0.25
                 if taxable_amount > 18151 and taxable_amount <= 73801:
                     tax = 18150 * 0.1 + (taxable_amount - 18151) * 0.15
-                if taxable_amount >= 0 and taxable_amount <= 18151:
+                if taxable_amount > 0 and taxable_amount <= 18151:
                     tax = taxable_amount * 0.1
             elif category == "3":
                 if taxable_amount > 432201:
@@ -102,7 +102,7 @@ def main():
                     tax = 12950 * 0.1 + 36449 * 0.15 + (taxable_amount - 49401) * 0.25
                 if taxable_amount > 12951 and taxable_amount <= 49401:
                     tax = 12950 * 0.1 + (taxable_amount - 12951) * 0.15
-                if taxable_amount >= 0 and taxable_amount <= 12951:
+                if taxable_amount > 0 and taxable_amount <= 12951:
                     tax = taxable_amount * 0.1
 
             print(ru.AMOUNT_TAX, tax)

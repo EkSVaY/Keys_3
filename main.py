@@ -75,9 +75,25 @@ def main():
         if taxable_amount >= 0 and taxable_amount <= 18151:
             tax = taxable_amount * 0.1
         print(tax)
-
     elif category == 3:
-        print("")
+                if taxable_amount >= 432201:
+            tax = 12950 * 0.1 + 36449 * 0.15 + 78149 * 0.25 + 79049 * 0.28 + \
+                  198499 * 0.33 + 27099 * 0.35 + (taxable_amount - 432201) * 0.396
+        if taxable_amount >= 405101 and taxable_amount <= 432200:
+            tax = 12950 * 0.1 + 36449 * 0.15 + 78149 * 0.25 + 79049 * 0.28 + \
+                  198499 * 0.33 + (taxable_amount - 405101) * 0.35
+        if taxable_amount >= 206601 and taxable_amount < 405101:
+            tax = 12950 * 0.1 + 36449 * 0.15 + 78149 * 0.25 + 79049 * 0.28 + \
+                  (taxable_amount - 206601) * 0.33
+        if taxable_amount >= 127551 and taxable_amount < 206601:
+            tax = 12950 * 0.1 + 36449 * 0.15 + 75049 * 0.25 + (taxable_amount - 127551) * 0.28
+        if taxable_amount >= 49401 and taxable_amount < 127551:
+            tax = 12950 * 0.1 + 36449 * 0.15 + (taxable_amount - 49401) * 0.25
+        if taxable_amount >= 12951 and taxable_amount < 49401:
+            tax = 12950 * 0.1 + (taxable_amount - 12951) * 0.15
+        if taxable_amount >= 0 and taxable_amount < 12951:
+            tax = taxable_amount * 0.1
+        print(tax)
     else:
         print(ru.FAIL)
 
